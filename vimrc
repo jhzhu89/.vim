@@ -69,8 +69,8 @@ else
   Plugin 'tpope/vim-abolish'
   Plugin 'ctrlpvim/ctrlp.vim'
   Plugin 'Valloric/YouCompleteMe'
-  Plugin 'cohama/lexima.vim'
   Plugin 'SirVer/ultisnips'
+  Plugin 'jiangmiao/auto-pairs'
 
   " Plugin 'vim-scripts/L9'
   " Plugin 'MarcWeber/vim-addon-mw-utils'
