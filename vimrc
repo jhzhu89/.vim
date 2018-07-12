@@ -71,6 +71,7 @@ else
   Plugin 'Valloric/YouCompleteMe'
   Plugin 'SirVer/ultisnips'
   Plugin 'jiangmiao/auto-pairs'
+  Plugin 'rdnetto/YCM-Generator'
 
   " Plugin 'vim-scripts/L9'
   " Plugin 'MarcWeber/vim-addon-mw-utils'
