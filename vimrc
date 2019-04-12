@@ -67,6 +67,7 @@ else
   " Misc
   "
   Plugin 'tpope/vim-abolish'
+  Plugin 'tpope/vim-unimpaired'
   Plugin 'ctrlpvim/ctrlp.vim'
   Plugin 'Valloric/YouCompleteMe'
   Plugin 'SirVer/ultisnips'
