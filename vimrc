@@ -79,6 +79,9 @@ else
   " Plugin 'YankRing.vim'
   " Plugin 'tpope/vim-dispatch'
 
+  Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all'  }
+  Plugin 'junegunn/fzf.vim'
+
   call vundle#end()
 
   filetype plugin indent on
