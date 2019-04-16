@@ -8,7 +8,7 @@ augroup go
   autocmd FileType go set nolist
 
   autocmd FileType go nmap <Leader>d <Plug>(go-doc)
-  " autocmd FileType go nmap <Leader>l <Plug>(go-metalinter)
+  autocmd FileType go nmap <Leader>l <Plug>(go-metalinter)
   autocmd FileType go nmap <Leader>dv <Plug>(go-def-vertical)
   autocmd FileType go nmap <Leader>dh <Plug>(go-def-split)
   autocmd FileType go nmap <Leader>dt <Plug>(go-def-tab)
@@ -53,6 +53,7 @@ let g:go_auto_type_info = 1
 let g:go_fmt_command = "goimports"
 let g:go_metalinter_enabled = ['vet', 'golint', 'errcheck']
 let g:go_list_type = "quickfix"
+" let g:go_def_mode='gopls'
 
 set updatetime=100
 
