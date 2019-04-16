@@ -25,17 +25,23 @@ vmap <leader>s  :s/
 map <leader>v   :vsp<CR>
 
 " Move between screens
-map <leader>w   ^Ww
-map <leader>=   ^W=
-map <leader>j   ^Wj
-map <leader>k   ^Wk
+" map <leader>w   ^Ww
+" map <leader>=   ^W=
+" map <leader>j   ^Wj
+" map <leader>k   ^Wk
 nmap <C-j>      <C-w>j
 nmap <C-k>      <C-w>k
 nmap <C-h>      <C-w>h
 nmap <C-l>      <C-w>l
+" nmap <leader>=   <C-w>=
+" nmap <leader>j   <C-w>j
+" nmap <leader>k   <C-w>k
+" nmap <leader>h   <C-w>h
+" nmap <leader>l   <C-w>l
 
 " Close current window
 nmap <leader>q   :q<CR>
+nmap <leader>w   :w<CR>
 nmap <leader>qq  :q!<CR>
 nmap <leader>wq  :wq<CR>
 

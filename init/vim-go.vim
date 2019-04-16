@@ -8,7 +8,7 @@ augroup go
   autocmd FileType go set nolist
 
   autocmd FileType go nmap <Leader>d <Plug>(go-doc)
-  autocmd FileType go nmap <Leader>l <Plug>(go-metalinter)
+  " autocmd FileType go nmap <Leader>l <Plug>(go-metalinter)
   autocmd FileType go nmap <Leader>dv <Plug>(go-def-vertical)
   autocmd FileType go nmap <Leader>dh <Plug>(go-def-split)
   autocmd FileType go nmap <Leader>dt <Plug>(go-def-tab)
