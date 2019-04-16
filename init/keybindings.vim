@@ -34,6 +34,11 @@ nmap <C-k>      <C-w>k
 nmap <C-h>      <C-w>h
 nmap <C-l>      <C-w>l
 
+" Close current window
+nmap <leader>q   :q<CR>
+nmap <leader>qq  :q!<CR>
+nmap <leader>wq  :wq<CR>
+
 " Open .vimrc file in new tab. Think Command + , [Preferences...] but with Shift.
 map <D-<>       :tabedit ~/.vimrc<CR>
 
