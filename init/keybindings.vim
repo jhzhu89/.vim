@@ -38,6 +38,7 @@ nmap <C-l>      <C-w>l
 nmap <leader>q   :q<CR>
 nmap <leader>w   :w<CR>
 nmap <leader>qq  :q!<CR>
+nmap <leader>qa  :qa<CR>
 nmap <leader>wq  :wq<CR>
 
 " Open .vimrc file in new tab. Think Command + , [Preferences...] but with Shift.
