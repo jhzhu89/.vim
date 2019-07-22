@@ -55,6 +55,7 @@ else
   "
   Plugin 'plasticboy/vim-markdown'
   Plugin 'fatih/vim-go'
+  Plugin 'AndrewRadev/splitjoin.vim'
   Plugin 'chrisbra/csv.vim'
   Plugin 'elzr/vim-json'
 

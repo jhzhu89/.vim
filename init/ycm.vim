@@ -8,7 +8,7 @@ augroup cpp
   autocmd FileType c,cpp set noexpandtab
   autocmd FileType c,cpp set nolist
 
-  autocmd FileType c,cpp setl sw=2 sts=8 ts=8 et
+  autocmd FileType c,cpp setl sw=2 sts=4 ts=4 et
 
   autocmd FileType c,cpp nmap <leader>jd :YcmCompleter GoToDefinition<CR>
   autocmd FileType c,cpp nmap <leader>jD :YcmCompleter GoToDeclaration<CR>
