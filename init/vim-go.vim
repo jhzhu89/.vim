@@ -53,6 +53,7 @@ let g:go_auto_type_info = 1
 let g:go_fmt_command = "goimports"
 let g:go_metalinter_enabled = ['vet', 'golint', 'errcheck']
 let g:go_list_type = "quickfix"
+let g:go_code_completion_enabled = 0
 " let g:go_def_mode='gopls'
 
 set updatetime=100
