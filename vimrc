@@ -64,9 +64,10 @@ else
   "
   Plugin 'tpope/vim-fugitive'
   Plugin 'airblade/vim-gitgutter'
-"
+
   " Misc
   "
+  Plugin 'tpope/vim-surround'
   Plugin 'tpope/vim-abolish'
   Plugin 'tpope/vim-unimpaired'
   Plugin 'ctrlpvim/ctrlp.vim'
