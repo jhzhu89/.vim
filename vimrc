@@ -85,6 +85,8 @@ else
   Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all'  }
   Plugin 'junegunn/fzf.vim'
 
+  Plugin 'OmniSharp/omnisharp-vim'
+
   call vundle#end()
 
   filetype plugin indent on
