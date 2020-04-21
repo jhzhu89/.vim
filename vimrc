@@ -86,6 +86,7 @@ else
   Plugin 'junegunn/fzf.vim'
 
   Plugin 'OmniSharp/omnisharp-vim'
+  Plugin 'prabirshrestha/asyncomplete.vim'
 
   call vundle#end()
 

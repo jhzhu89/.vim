@@ -38,3 +38,6 @@ autocmd FileType ruby imap  <Space>=><Space>
 
 " Open all folds in Markdown.
 autocmd FileType mkd normal zR
+
+autocmd FileType cs setlocal shiftwidth=4 softtabstop=4 expandtab
+autocmd FileType go setlocal noexpandtab tabstop=2

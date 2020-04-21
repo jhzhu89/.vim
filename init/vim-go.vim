@@ -4,7 +4,6 @@ nmap <F8> :TagbarToggle<CR>
 augroup go
   autocmd!
 
-  autocmd FileType go set noexpandtab
   autocmd FileType go set nolist
 
   autocmd FileType go nmap <Leader>d <Plug>(go-doc)

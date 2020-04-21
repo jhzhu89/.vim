@@ -1,22 +1,13 @@
-" unite, or ctrlp, or blank(use vim quickfix)
-let g:OmniSharp_selector_ui = 'fzf'
-let g:OmniSharp_highlight_groups = {
-\ 'csUserIdentifier': [
-\   'constant name', 'enum member name', 'field name', 'identifier',
-\   'local name', 'parameter name', 'property name', 'static symbol'],
-\ 'csUserInterface': ['interface name'],
-\ 'csUserMethod': ['extension method name', 'method name'],
-\ 'csUserType': ['class name', 'enum name', 'namespace name', 'struct name']
-\}
+" let g:OmniSharp_server_path = '/home/jiahzhu/.vim/bundle/YouCompleteMe/third_party/ycmd/third_party/omnisharp-roslyn/run'
 
 " Use the stdio OmniSharp-roslyn server
 let g:OmniSharp_server_stdio = 1
 
 " Set the type lookup function to use the preview window instead of echoing it
-"let g:OmniSharp_typeLookupInPreview = 1
+" let g:OmniSharp_typeLookupInPreview = 1
 
 " Timeout in seconds to wait for a response from the server
-let g:OmniSharp_timeout = 5
+" let g:OmniSharp_timeout = 5
 
 " Don't autoselect first omnicomplete option, show options even if there is only
 " one (so the preview documentation is accessible). Remove 'preview' if you
@@ -30,15 +21,25 @@ set completeopt=longest,menuone,preview
 
 " Set desired preview window height for viewing documentation.
 " You might also want to look at the echodoc plugin.
-set previewheight=5
+" set previewheight=5
 
 " Tell ALE to use OmniSharp for linting C# files, and no other linters.
-let g:ale_linters = { 'cs': ['OmniSharp'] }
+" let g:ale_linters = { 'cs': ['OmniSharp'] }
 
-" Update semantic highlighting after all text changes
-let g:OmniSharp_highlight_types = 3
 " Update semantic highlighting on BufEnter and InsertLeave
-" let g:OmniSharp_highlight_types = 2
+let g:OmniSharp_highlight_types = 2
+
+" unite, or ctrlp, or blank(use vim quickfix)
+let g:OmniSharp_selector_ui = 'fzf'
+
+let g:OmniSharp_highlight_groups = {
+\ 'csUserIdentifier': [
+\   'constant name', 'enum member name', 'field name', 'identifier',
+\   'local name', 'parameter name', 'property name', 'static symbol'],
+\ 'csUserInterface': ['interface name'],
+\ 'csUserMethod': ['extension method name', 'method name'],
+\ 'csUserType': ['class name', 'enum name', 'namespace name', 'struct name']
+\}
 
 augroup omnisharp_commands
     autocmd!
