@@ -4,7 +4,7 @@
 let g:OmniSharp_server_stdio = 1
 
 " Set the type lookup function to use the preview window instead of echoing it
-" let g:OmniSharp_typeLookupInPreview = 1
+let g:OmniSharp_typeLookupInPreview = 1
 
 " Timeout in seconds to wait for a response from the server
 " let g:OmniSharp_timeout = 5
@@ -47,7 +47,7 @@ augroup omnisharp_commands
     " Show type information automatically when the cursor stops moving.
     " Note that the type is echoed to the Vim command line, and will overwrite
     " any other messages in this space including e.g. ALE linting messages.
-    autocmd CursorHold *.cs OmniSharpTypeLookup
+    " autocmd CursorHold *.cs OmniSharpTypeLookup
 
     " The following commands are contextual, based on the cursor position.
     autocmd FileType cs nnoremap <buffer> gd :OmniSharpGotoDefinition<CR>
