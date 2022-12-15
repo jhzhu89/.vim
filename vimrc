@@ -30,19 +30,29 @@ else
   " Colorschemes
   "
   Plugin 'molokai'
-  " Plugin 'altercation/vim-colors-solarized'
+  Plugin 'altercation/vim-colors-solarized'
   Plugin 'flazz/vim-colorschemes'
 
   "
   " General Editing
   "
-  Plugin 'sjl/gundo.vim'
+  Plugin 'tpope/vim-repeat'
+  Plugin 'tpope/vim-surround'
+  Plugin 'scrooloose/nerdcommenter'
+  Plugin 'tpope/vim-unimpaired'
   Plugin 'godlygeek/tabular'
   Plugin 'vim-airline/vim-airline'
   Plugin 'vim-airline/vim-airline-themes'
-  Plugin 'easymotion/vim-easymotion'
-  Plugin 'terryma/vim-multiple-cursors'
-  Plugin 'editorconfig/editorconfig-vim'
+  Plugin 'camelcasemotion'
+  Plugin 'Lokaltog/vim-easymotion'
+  Plugin 'YankRing.vim'
+
+  "
+  " Searching
+  "
+  Plugin 'tpope/vim-abolish'
+  Plugin 'yggdroot/leaderf'
+  Plugin 'burntsushi/ripgrep'
 
   "
   " Navigation
@@ -50,12 +60,14 @@ else
   Plugin 'scrooloose/nerdtree'
   Plugin 'majutsushi/tagbar'
 
+  Plugin 'christoomey/vim-tmux-navigator'
+
   "
   " Languages
   "
   Plugin 'plasticboy/vim-markdown'
+  Plugin 'tpope/vim-haml'
   Plugin 'fatih/vim-go'
-  Plugin 'AndrewRadev/splitjoin.vim'
   Plugin 'chrisbra/csv.vim'
   Plugin 'elzr/vim-json'
 
@@ -65,28 +77,24 @@ else
   Plugin 'tpope/vim-fugitive'
   Plugin 'airblade/vim-gitgutter'
 
-  " Misc
   "
-  Plugin 'tpope/vim-surround'
-  Plugin 'tpope/vim-abolish'
-  Plugin 'tpope/vim-unimpaired'
-  Plugin 'ctrlpvim/ctrlp.vim'
+  " Rust
+  "
+  Plugin 'rust-lang/rust.vim'
+  Plugin 'racer-rust/vim-racer'
+
   Plugin 'Valloric/YouCompleteMe'
-  Plugin 'SirVer/ultisnips'
-  Plugin 'jiangmiao/auto-pairs'
   Plugin 'rdnetto/YCM-Generator'
 
-  " Plugin 'vim-scripts/L9'
-  " Plugin 'MarcWeber/vim-addon-mw-utils'
-  " Plugin 'SirVer/ultisnips'
-  " Plugin 'YankRing.vim'
-  " Plugin 'tpope/vim-dispatch'
+  "
+  " TOML
+  "
+  Plugin 'cespare/vim-toml'
+
+  Plugin 'ryanoasis/vim-devicons'
 
   Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all'  }
   Plugin 'junegunn/fzf.vim'
-
-  Plugin 'OmniSharp/omnisharp-vim'
-  Plugin 'prabirshrestha/asyncomplete.vim'
 
   call vundle#end()
 

@@ -9,19 +9,24 @@ set visualbell                  " Suppress audio/visual error bell
 
 " set notimeout                   " No command timeout
 set ttimeout                    " Add back a timeout for terminal vim
-set timeoutlen=500              " Keep the timeout very short
-set ttimeoutlen=50              " Keep the timeout very short
+set ttimeoutlen=100             " Keep the timeout very short
 
 set showcmd                     " Show typed command prefixes while waiting for operator
 set mouse=a                     " Use mouse support in XTerm/iTerm.
 
 set expandtab                   " Use soft tabs
+set tabstop=2                   " Tab settings
 set autoindent
 set smarttab                    " Use shiftwidth to tab at line beginning
 set shiftwidth=2                " Width of autoindent
 set number                      " Line numbers
 set nowrap                      " No wrapping
-set backspace=indent,eol,start  " Let backspace work over anything.
+set backspace=indent,eol,start " Let backspace work over anything.
+set wildignore+=tags               " Ignore tags when globbing.
+set wildignore+=tmp/**             " ...Also tmp files.
+set wildignore+=public/uploads/**  " ...Also uploads.
+set wildignore+=public/images/**   " ...Also images.
+set wildignore+=vendor/**          " ...Also vendor.
 
 set list                        " Show whitespace
 set listchars=trail:·
@@ -50,3 +55,11 @@ set hls                         " search with highlights by default
 " Write all writeable buffers when changing buffers or losing focus.
 set autowriteall                " Save when doing various buffer-switching things.
 autocmd BufLeave,FocusLost * silent! wall  " Save anytime we leave a buffer or MacVim loses focus.
+
+let g:sql_type_default="postgresql"
+
+" Turn off ri tooltips that don't work with Ruby 1.9 yet
+" http://code.google.com/p/macvim/issues/detail?id=342
+if has("gui_running")
+  set noballooneval
+endif

@@ -29,10 +29,10 @@ map <leader>v   :vsp<CR>
 " map <leader>=   ^W=
 " map <leader>j   ^Wj
 " map <leader>k   ^Wk
-nmap <C-j>      <C-w>j
-nmap <C-k>      <C-w>k
-nmap <C-h>      <C-w>h
-nmap <C-l>      <C-w>l
+" nmap <C-j>      <C-w>j
+" nmap <C-k>      <C-w>k
+" nmap <C-h>      <C-w>h
+" nmap <C-l>      <C-w>l
 
 " Close current window
 nmap <leader>q   :q<CR>
@@ -86,10 +86,13 @@ vmap <s-tab> <gv
 
 " map <leader>rt :!~/.vim/bin/update_ctags 2>/dev/null &<CR>
 
+" Git blame
+map <leader>g   :Gblame<CR>
+
 " Comment/uncomment lines
-" map <leader>/   <plug>NERDCommenterToggle
-" map <D-/>       <plug>NERDCommenterToggle
-" imap <D-/>      <Esc><plug>NERDCommenterToggle i
+map <leader>/   <plug>NERDCommenterToggle
+map <D-/>       <plug>NERDCommenterToggle
+imap <D-/>      <Esc><plug>NERDCommenterToggle i
 
 " In command-line mode, <C-A> should go to the front of the line, as in bash.
 cmap <C-A> <C-B>
@@ -120,104 +123,13 @@ map <silent> <F19>WriteAll :silent! wall<CR>
 " displayed.
 nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>""
 
+" Tagbar
+nmap <leader>l :TagbarToggle<CR>
+
 " YankRing show registers
-" :nnoremap <silent> <F6> :YRShow<CR>
+:nnoremap <silent> <F6> :YRShow<CR>
 
-" {{{
-" ctrlp
-  " <leader>f is the default trigger (set in init/ctrlp.vim)
-  nnoremap <silent> <leader>F :CtrlPClearAllCaches<CR>:CtrlPCurWD<CR>
+" Convert a word to to let(:word) { double(:word) }
+nmap <leader>ld <Plug>LocalMakelet
 
-  " Additional mapping for buffer search
-  nnoremap <silent> <leader>bb :CtrlPBuffer<cr>
-  map <D-e> :CtrlPBuffer<CR>
-
-  " Map most recently used
-  nnoremap <silent> <C-p> :CtrlPMRU<cr>
-
-  " Cmd-Shift-P to clear the cache
-  nnoremap <silent> <D-P> :ClearCtrlPCache<cr>
-
-  "Cmd-Shift-(M)ethod - jump to a method (tag in current file)
-  "Ctrl-m is not good - it overrides behavior of Enter
-  nnoremap <silent> <D-M> :CtrlPBufTag<CR>
-
-  " Mappings inherited from FuzzyFinder
-  map <leader><C-N> :CtrlPCurWD<CR>
-  map <leader>n :CtrlPCurWD<CR>
-  map <D-N> :CtrlPCurWD<CR>
-" }}}
-
-
-" {{{
-  " fzf keybindings
-  " -----------
-  nnoremap <silent> <leader><space> :Files<CR>
-  nnoremap <silent> <leader>a :Buffers<CR>
-  nnoremap <silent> <leader>A :Windows<CR>
-  nnoremap <silent> <leader>; :BLines<CR>
-  nnoremap <silent> <leader>o :BTags<CR>
-  nnoremap <silent> <leader>O :Tags<CR>
-  nnoremap <silent> <leader>? :History<CR>
-  nnoremap <silent> <leader>/ :execute 'Ag ' . input('Ag/')<CR>
-
-  nnoremap <silent> KK :call SearchWordWithAg()<CR>
-  vnoremap <silent> KK :call SearchVisualSelectionWithAg()<CR>
-  nnoremap <silent> <leader>gf :GFiles<CR>
-  nnoremap <silent> <leader>gl :Commits<CR>
-  nnoremap <silent> <leader>ga :BCommits<CR>
-  nnoremap <silent> <leader>ft :Filetypes<CR>
-
-  imap <C-x><C-f> <plug>(fzf-complete-file-ag)
-  imap <C-x><C-l> <plug>(fzf-complete-line)
-
-  function! SearchWordWithAg()
-    execute 'Ag' expand('<cword>')
-  endfunction
-
-  function! SearchVisualSelectionWithAg() range
-    let old_reg = getreg('"')
-    let old_regtype = getregtype('"')
-    let old_clipboard = &clipboard
-    set clipboard&
-    normal! ""gvy
-    let selection = getreg('"')
-    call setreg('"', old_reg, old_regtype)
-    let &clipboard = old_clipboard
-    execute 'Ag' selection
-  endfunction
-" }}}
-
-" {{{
-  nnoremap <silent> <leader>gs :Gstatus<CR>
-  nnoremap <silent> <leader>gd :Gdiff<CR>
-  nnoremap <silent> <leader>gc :Gcommit<CR>
-  nnoremap <silent> <leader>gb :Gblame<CR>
-  nnoremap <silent> <leader>ge :Gedit<CR>
-  nnoremap <silent> <leader>gE :Gedit<space>
-  nnoremap <silent> <leader>gr :Gread<CR>
-  nnoremap <silent> <leader>gR :Gread<space>
-  nnoremap <silent> <leader>gw :Gwrite<CR>
-  nnoremap <silent> <leader>gW :Gwrite!<CR>
-  nnoremap <silent> <leader>gq :Gwq<CR>
-  nnoremap <silent> <leader>gQ :Gwq!<CR>
-
-  function! ReviewLastCommit()
-    if exists('b:git_dir')
-      Gtabedit HEAD^{}
-      nnoremap <buffer> <silent> q :<C-U>bdelete<CR>
-    else
-      echo 'No git a git repository:' expand('%:p')
-    endif
-  endfunction
-  nnoremap <silent> <leader>g` :call ReviewLastCommit()<CR>
-" }}}
-
-" {{{
-  nmap <silent> ]h :GitGutterNextHunk<CR>
-  nmap <silent> [h :GitGutterPrevHunk<CR>
-  nnoremap <silent> <Leader>gu :GitGutterRevertHunk<CR>
-  nnoremap <silent> <Leader>gp :GitGutterPreviewHunk<CR><c-w>j
-  nnoremap cog :GitGutterToggle<CR>
-  nnoremap <Leader>gt :GitGutterAll<CR>
-" }}}
+nmap <leader>rp :RainbowParenthesesToggle<CR>
