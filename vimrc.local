@@ -1,5 +1,4 @@
-" colorscheme solarized
-colorscheme molokai
+colorscheme solarized
 
 " vim tab operations
 nnoremap th  :tabfirst<CR>

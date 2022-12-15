@@ -28,7 +28,7 @@ set wildignore+=public/uploads/**  " ...Also uploads.
 set wildignore+=public/images/**   " ...Also images.
 set wildignore+=vendor/**          " ...Also vendor.
 
-set list                        " Show whitespace
+" set list                        " Show whitespace
 set listchars=trail:·
 
 set showmatch                   " Show matching brackets
