@@ -22,3 +22,5 @@ let g:go_highlight_fields = 1
 let g:go_highlight_format_strings = 1
 let g:go_highlight_string_spellcheck = 1
 let g:go_highlight_variable_declarations = 0
+let g:go_gopls_enabled = 0
+let g:go_def_mapping_enabled = 0

@@ -83,8 +83,8 @@ else
   Plugin 'rust-lang/rust.vim'
   Plugin 'racer-rust/vim-racer'
 
-  Plugin 'Valloric/YouCompleteMe'
-  Plugin 'rdnetto/YCM-Generator'
+  " Plugin 'Valloric/YouCompleteMe'
+  " Plugin 'rdnetto/YCM-Generator'
 
   "
   " TOML
@@ -95,6 +95,8 @@ else
 
   Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all'  }
   Plugin 'junegunn/fzf.vim'
+
+  Plugin 'neoclide/coc.nvim', { 'branch': 'release', 'do': 'yarn install --frozen-lockfile' }
 
   call vundle#end()
 
