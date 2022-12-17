@@ -22,4 +22,4 @@ set encoding=utf-8
 set noswapfile
 hi Normal guibg=NONE ctermbg=NONE
 
-let g:airline_theme='molokai'
+" let g:airline_theme='solarized'
